@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Righteous, sans-serif;
+  background-color: whitesmoke;
+}
+
+/* Animated Title */
+.animated {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    #000000,
+    #b6842e,
+    #365370,
+    #000000
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  background-size: 300%;
+  background-position: -100%;
+
+  animation: animatedText 5s infinite alternate-reverse;
+}
+
+@keyframes animatedText {
+  to {
+    background-position: 100%;
+  }
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: -1px;
+  margin-top: 25px;
+}
+
+/* Image Container */
+.image-container {
+  margin: 30px 20%;
+}
+
+.image-container img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.loader img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+@media screen and (max-width: 680px) {
+  .image-container {
+    margin: 10px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+}
